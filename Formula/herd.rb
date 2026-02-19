@@ -5,23 +5,23 @@
 class Herd < Formula
   desc "TUI manager for multiple Claude Code sessions"
   homepage "https://github.com/allenan/herd"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/allenan/herd/releases/download/v0.2.0/herd_0.2.0_darwin_amd64.tar.gz"
-      sha256 "39d75d7fbe3ae2a0f92ab8c77154461e4c8b1ead5328750d6583c547881d12a5"
+      url "https://github.com/allenan/herd/releases/download/v0.3.0/herd_0.3.0_darwin_amd64.tar.gz"
+      sha256 "b1503a151990bb8911c38d9df00c4e5221e0120bfadd0d3b1f791078a455ee0f"
 
       def install
         bin.install "herd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/allenan/herd/releases/download/v0.2.0/herd_0.2.0_darwin_arm64.tar.gz"
-      sha256 "d7a9a15e23095ae5e438d6f1b872e1ddff05e5657379b4185f4ddfaed0d01554"
+      url "https://github.com/allenan/herd/releases/download/v0.3.0/herd_0.3.0_darwin_arm64.tar.gz"
+      sha256 "a899f040017a7ec6a98c50ef960ce19c8f07d2742db51cd4a8655a92c6a83ca2"
 
       def install
         bin.install "herd"
@@ -31,15 +31,15 @@ class Herd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/allenan/herd/releases/download/v0.2.0/herd_0.2.0_linux_amd64.tar.gz"
-      sha256 "1f464941a72aca0ccea4dd61eea9134adadea18d7de9f437a798f9732f63dd61"
+      url "https://github.com/allenan/herd/releases/download/v0.3.0/herd_0.3.0_linux_amd64.tar.gz"
+      sha256 "80debacc98fc9fafdd9ed843f49b3c840764ee9310ab69e46989aacbe2a45c0c"
       def install
         bin.install "herd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/allenan/herd/releases/download/v0.2.0/herd_0.2.0_linux_arm64.tar.gz"
-      sha256 "6833698687223eddb4e4043256ed3aa192745c6beb7c2e4cc70a71921e9e220c"
+      url "https://github.com/allenan/herd/releases/download/v0.3.0/herd_0.3.0_linux_arm64.tar.gz"
+      sha256 "fd146e7c28cc11208f16100ab1b75924a8d4bce7820210b1ff1c85aa2ad9fe10"
       def install
         bin.install "herd"
       end
